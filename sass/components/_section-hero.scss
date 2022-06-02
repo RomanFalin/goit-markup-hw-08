@@ -13,24 +13,33 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 600px;
+  max-height: 600px;
   max-width: 1600px;
 }
 
 .hero {
   text-align: center;
+}
 
-  &-title {
-    font-weight: 900;
+.hero-title {
+  font-weight: 900;
+  font-size: 26px;
+  width: 696px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.61;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: $back-color;
+  margin-bottom: $item-margin;
+
+  @media screen and (max-width: 1199px) {
+    width: 360px;
+  }
+
+  @media screen and (min-width: 1200px) {
     font-size: 44px;
-    width: 696px;
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 1.3;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: $back-color;
-    margin-bottom: $item-margin;
+    line-height: 1.36;
   }
 }
 
