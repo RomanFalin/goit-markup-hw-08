@@ -1,0 +1,68 @@
+body {
+  font-family: "Roboto", sans-serif;
+  color: #212121;
+  background-color: #ffffff;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+}
+
+@import "./utils/vars";
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+address {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+@import "./components/section-header";
+@import "./components/section-hero";
+@import "./components/section-advantages";
+@import "./components/section-activities";
+@import "./components/section-team";
+@import "./components/section-clients";
+@import "./components/section-footer";
+@import "./components/section-filters";
+@import "./components/backdrop";
