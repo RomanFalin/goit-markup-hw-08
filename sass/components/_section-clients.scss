@@ -7,26 +7,56 @@
 
 .clients-title {
   font-weight: 700;
-  font-size: 36px;
-  line-height: 42px;
+  font-size: 28px;
+  line-height: 1.18;
   text-align: center;
   color: $main-color;
   margin-bottom: 50px;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 36px;
+    line-height: 1.16;
+  }
 }
 
 .clients-list {
   display: flex;
 
-  &__item {
-    width: 170px;
-    height: 92px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  @media screen and (min-width: 480px) and (max-width: 1199px) {
+    flex-wrap: wrap;
+    margin-right: calc(-1 * #{$item-margin});
+    margin-bottom: calc(-1 * #{$item-margin});
+  }
+}
+
+.clients-list__item {
+  width: 170px;
+  height: 92px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (min-width: 480px) {
+    flex-basis: calc(100% / 2 - #{$item-margin});
+    margin-right: $item-margin;
+    margin-bottom: $item-margin;
   }
 
-  &__item:not(:last-child) {
-    margin-right: 30px;
+  @media screen and (min-width: 768px) {
+    flex-basis: calc(100% / 3 - #{$item-margin});
+    margin-right: $item-margin;
+    margin-bottom: $item-margin;
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-basis: auto;
+    margin: 0;
+  }
+
+  &:not(:last-child) {
+    @media screen and (min-width: 1200px) {
+      margin-right: $item-margin;
+    }
   }
 }
 

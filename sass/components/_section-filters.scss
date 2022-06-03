@@ -8,8 +8,24 @@
   justify-content: center;
   margin-bottom: 50px;
 
-  &__item:not(:last-child) {
+  @media screen and (max-width: 767px) {
+    flex-wrap: wrap;
+    justify-content: left;
+    margin-right: -8px;
+    margin-bottom: 35px;
+  }
+}
+
+.filters-list__item {
+  @media screen and (max-width: 767px) {
     margin-right: 8px;
+    margin-bottom: 15px;
+  }
+
+  &:not(:last-child) {
+    @media screen and (min-width: 768px) {
+      margin-right: 8px;
+    }
   }
 }
 
@@ -42,43 +58,63 @@
   padding: 0;
   margin: 0;
   list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: calc(-1 * #{$item-margin});
-  margin-bottom: calc(-1 * #{$item-margin});
 
-  &__item {
-    background: $back-color;
-    flex-basis: calc(100% / 3 - #{$item-margin});
+  @media screen and (max-width: 767px) {
+    justify-content: center;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: calc(-1 * #{$item-margin});
+    margin-bottom: calc(-1 * #{$item-margin});
+  }
+}
+
+.examples-list__item {
+  background: $back-color;
+
+  @media screen and (min-width: 768px) {
+    flex-basis: calc(100% / 2 - #{$item-margin});
     margin-right: $item-margin;
     margin-bottom: $item-margin;
   }
 
-  &__title {
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 2;
-    letter-spacing: 0.06em;
-    color: $main-color;
-    margin-bottom: 4px;
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc(100% / 3 - #{$item-margin});
+    margin-right: $item-margin;
+    margin-bottom: $item-margin;
   }
+}
 
-  &__sphere {
-    font-size: 16px;
-    line-height: 1.87;
-    color: $sub-text-color;
-  }
+.examples-list__item:not(:last-child) {
+  margin-bottom: $item-margin;
+}
 
-  &__img {
-    display: block;
-    position: relative;
-    overflow: hidden;
-  }
+.examples-list__title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: $main-color;
+  margin-bottom: 4px;
+}
 
-  &__text {
-    padding: 20px 24px;
-    border: 1px solid #eeeeee;
-  }
+.examples-list__sphere {
+  font-size: 16px;
+  line-height: 1.87;
+  color: $sub-text-color;
+}
+
+.examples-list__img {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.examples-list__text {
+  padding: 20px 24px;
+  border: 1px solid #eeeeee;
 }
 
 .examples-list__link {

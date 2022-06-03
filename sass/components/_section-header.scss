@@ -16,10 +16,19 @@
 .navigation__logo {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.2;
+  font-size: 24px;
+  line-height: 1.16;
   color: $main-color;
-  margin-right: 93px;
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-right: 88px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 93px;
+    font-size: 26px;
+    line-height: 1.19;
+  }
 
   &--first {
     color: $brand-color;
@@ -76,25 +85,43 @@
   display: flex;
   margin-left: auto;
   align-items: center;
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: 138px;
+    flex-wrap: wrap;
+  }
 }
 
 .header-contacts__item {
   display: flex;
 
+  &:not(:last-child) {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      margin-bottom: 10px;
+    }
+  }
+
   &:not(:first-child) {
-    margin-left: 50px;
+    @media screen and (min-width: 1200px) {
+      margin-left: 50px;
+    }
   }
 }
 
 .header-contacts__link {
   display: flex;
   font-weight: 500;
-  line-height: 1.2;
+  line-height: 1.14;
   letter-spacing: 0.02em;
   color: $sub-text-color;
   text-decoration: none;
   list-style-type: none;
   transition: color $transition-type;
+
+  @media screen and (max-width: 1199px) {
+    font-size: 12px;
+    line-height: 1.16;
+  }
 
   &:hover,
   &:focus {

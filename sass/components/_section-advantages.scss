@@ -11,11 +11,14 @@
   @media screen and (min-width: 768px) {
     display: flex;
     flex-wrap: wrap;
+    margin-right: calc(-1 * #{$item-margin});
+    margin-bottom: calc(-1 * #{$item-margin});
   }
 
   @media screen and (min-width: 1200px) {
     display: flex;
     justify-content: space-between;
+    margin: 0;
   }
 }
 
@@ -54,8 +57,16 @@
 .features__item {
   width: 100%;
 
-  @media screen and (min-width: 768px) {
-    width: 50%;
+  &:not(:last-child) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: $item-margin;
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    flex-basis: calc(100% / 2 - #{$item-margin});
+    margin-right: $item-margin;
+    margin-bottom: $item-margin;
   }
 
   @media screen and (min-width: 1200px) {
