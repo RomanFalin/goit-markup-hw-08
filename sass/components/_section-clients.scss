@@ -22,7 +22,7 @@
 .clients-list {
   display: flex;
 
-  @media screen and (min-width: 480px) and (max-width: 1199px) {
+  @media screen and (max-width: 1199px) {
     flex-wrap: wrap;
     margin-right: calc(-1 * #{$item-margin});
     margin-bottom: calc(-1 * #{$item-margin});
@@ -36,7 +36,7 @@
   align-items: center;
   justify-content: center;
 
-  @media screen and (min-width: 480px) {
+  @media screen and (max-width: 767px) {
     flex-basis: calc(100% / 2 - #{$item-margin});
     margin-right: $item-margin;
     margin-bottom: $item-margin;

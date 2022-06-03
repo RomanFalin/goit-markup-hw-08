@@ -18,40 +18,49 @@
                 <a class="navigation__logo" href="./index.html" lang="en">
                     <span class="navigation__logo--first">Web</span>Studio
                 </a>
-                <ul class="pages">
-                    <li class="pages__item">
-                        <a class="pages__link" href="./index.html"> Студия </a>
-                    </li>
-                    <li class="pages__item">
-                        <a class="pages__link--active" href="./portfolio.html"> Портфолио </a>
-                    </li>
-                    <li class="pages__item">
-                        <a class="pages__link" href=""> Контакты </a>
-                    </li>
-                </ul>
+                <button type="button" class="menu-button is-open" aria-expanded="false" aria-controls="menu-container"
+                    data-menu-button>
+                    <svg width="40px" height="40px" aria-label="Переключатель меню">
+                        <use class="icon-menu" href="./images/sprite-menu.svg#menu"></use>
+                        <use class="icon-cross" href="./images/sprite-menu.svg#close"></use>
+                    </svg>
+                </button>
+                <div class="menu-container is-open" id="menu-container" data-menu>
+                    <ul class="pages">
+                        <li class="pages__item">
+                            <a class="pages__link" href="./index.html"> Студия </a>
+                        </li>
+                        <li class="pages__item">
+                            <a class="pages__link--active" href="./portfolio.html"> Портфолио </a>
+                        </li>
+                        <li class="pages__item">
+                            <a class="pages__link" href=""> Контакты </a>
+                        </li>
+                    </ul>
+                    <ul class="header-contacts">
+                        <li class="header-contacts__item">
+                            <a class="header-contacts__link" href="mailto:info@devstudio.com">
+                                <div class="header-contacts__thumb">
+                                    <svg class="header-contacts__icon">
+                                        <use href="./images/sprite.svg#envelope"></use>
+                                    </svg>
+                                </div>
+                                info@devstudio.com
+                            </a>
+                        </li>
+                        <li class="header-contacts__item">
+                            <a class="header-contacts__link" href="tel:+380961111111">
+                                <div class="header-contacts__thumb">
+                                    <svg class="header-contacts__icon">
+                                        <use href="./images/sprite.svg#phone"></use>
+                                    </svg>
+                                </div>
+                                +38 096 111 11 11
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </nav>
-            <ul class="header-contacts">
-                <li class="header-contacts__item">
-                    <a class="header-contacts__link" href="mailto:info@devstudio.com">
-                        <div class="header-contacts__thumb">
-                            <svg class="header-contacts__icon">
-                                <use href="./images/sprite.svg#envelope"></use>
-                            </svg>
-                        </div>
-                        info@devstudio.com
-                    </a>
-                </li>
-                <li class="header-contacts__item">
-                    <a class="header-contacts__link" href="tel:+380961111111">
-                        <div class="header-contacts__thumb">
-                            <svg class="header-contacts__icon">
-                                <use href="./images/sprite.svg#phone"></use>
-                            </svg>
-                        </div>
-                        +38 096 111 11 11
-                    </a>
-                </li>
-            </ul>
         </div>
     </header>
         <main>
@@ -267,5 +276,6 @@
                 </div>
             </div>
         </footer>
+        <script src="./mobile-menu.js"></script>
 </body>
 </html>
