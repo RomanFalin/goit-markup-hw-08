@@ -8,7 +8,6 @@
   background: rgba(0, 0, 0, 0.2);
   z-index: 2;
   transition: $transition-type;
-  overflow-y: scroll;
 
   &.is-hidden {
     opacity: 0;
@@ -17,6 +16,7 @@
 }
 
 .modal {
+  position: relative;
   display: flex;
   justify-content: center;
   padding: 40px;

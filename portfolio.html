@@ -15,17 +15,19 @@
     <header class="section-header">
         <div class="header container">
             <nav class="navigation">
-                <a class="navigation__logo" href="./index.html" lang="en">
-                    <span class="navigation__logo--first">Web</span>Studio
-                </a>
-                <button type="button" class="menu-button is-open" aria-expanded="false" aria-controls="menu-container"
-                    data-menu-button>
-                    <svg width="40px" height="40px" aria-label="Переключатель меню">
-                        <use class="icon-menu" href="./images/sprite-menu.svg#menu"></use>
-                        <use class="icon-cross" href="./images/sprite-menu.svg#close"></use>
-                    </svg>
-                </button>
-                <div class="menu-container is-open" id="menu-container" data-menu>
+                <div class="mobile-navigation">
+                    <a class="navigation__logo" href="./index.html" lang="en">
+                        <span class="navigation__logo--first">Web</span>Studio
+                    </a>
+                    <button type="button" class="menu-button" aria-expanded="false" aria-controls="menu-container"
+                        data-menu-button>
+                        <svg width="40px" height="40px" aria-label="Переключатель меню">
+                            <use class="icon-menu" href="./images/sprite-menu.svg#menu"></use>
+                            <use class="icon-cross" href="./images/sprite-menu.svg#close"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="menu-container" id="menu-container" data-menu>
                     <ul class="pages">
                         <li class="pages__item">
                             <a class="pages__link" href="./index.html"> Студия </a>
@@ -39,7 +41,17 @@
                     </ul>
                     <ul class="header-contacts">
                         <li class="header-contacts__item">
-                            <a class="header-contacts__link" href="mailto:info@devstudio.com">
+                            <a class="header-contacts__link telephone" href="tel:+380961111111">
+                                <div class="header-contacts__thumb">
+                                    <svg class="header-contacts__icon">
+                                        <use href="./images/sprite.svg#phone"></use>
+                                    </svg>
+                                </div>
+                                +38 096 111 11 11
+                            </a>
+                        </li>
+                        <li class="header-contacts__item">
+                            <a class="header-contacts__link email" href="mailto:info@devstudio.com">
                                 <div class="header-contacts__thumb">
                                     <svg class="header-contacts__icon">
                                         <use href="./images/sprite.svg#envelope"></use>
@@ -48,14 +60,26 @@
                                 info@devstudio.com
                             </a>
                         </li>
-                        <li class="header-contacts__item">
-                            <a class="header-contacts__link" href="tel:+380961111111">
-                                <div class="header-contacts__thumb">
-                                    <svg class="header-contacts__icon">
-                                        <use href="./images/sprite.svg#phone"></use>
-                                    </svg>
-                                </div>
-                                +38 096 111 11 11
+                    </ul>
+                    <ul class="header-contacts__social-links">
+                        <li class="header-contacts__social-item">
+                            <a href="" class="header-contacts__social-link">
+                                Instagram
+                            </a>
+                        </li>
+                        <li class="header-contacts__social-item">
+                            <a href="" class="header-contacts__social-link">
+                                Twitter
+                            </a>
+                        </li>
+                        <li class="header-contacts__social-item">
+                            <a href="" class="header-contacts__social-link">
+                                Facebook
+                            </a>
+                        </li>
+                        <li class="header-contacts__social-item">
+                            <a href="" class="header-contacts__social-link">
+                                Linkedin
                             </a>
                         </li>
                     </ul>
@@ -90,7 +114,12 @@
                         <li class="examples-list__item">
                             <a class="examples-list__link" href="">
                                 <div class="examples-list__img">
-                                    <img src="./images/port1.jpg" alt="Пример веб-сайта">
+                                    <picture>
+                                        <source srcset="./images/desk-port1.jpg 1x, ./images/desk-port1-2x.jpg 2x" media="(min-width:1200px)" />
+                                        <source srcset="./images/tab-port1.jpg 1x, ./images/tab-port1-2x.jpg 2x" media="(min-width:768px)" />
+                                        <source srcset="./images/mob-port1.jpg 1x, ./images/mob-port1-2x.jpg 2x" media="(min-width:480px)" />
+                                        <img src="./images/mob-port1.jpg" alt="Пример веб-сайта">
+                                    </picture>
                                     <p class="examples-list__explain"> Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить
                                     исчерпывающие сведения о компании или частном лице. </p>
                                 </div>
@@ -103,7 +132,12 @@
                         <li class="examples-list__item">
                             <a class="examples-list__link" href="">
                                 <div class="examples-list__img">
-                                    <img src="./images/port2.jpg" alt="Пример веб-сайта">
+                                    <picture>
+                                        <source srcset="./images/desk-port2.jpg 1x, ./images/desk-port2-2x.jpg 2x" media="(min-width:1200px)" />
+                                        <source srcset="./images/tab-port2.jpg 1x, ./images/tab-port2-2x.jpg 2x" media="(min-width:768px)" />
+                                        <source srcset="./images/mob-port2.jpg 1x, ./images/mob-port2-2x.jpg 2x" media="(min-width:480px)" />
+                                        <img src="./images/mob-port2.jpg" alt="Пример веб-сайта">
+                                    </picture>
                                     <p class="examples-list__explain"> Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
                                         позволит посетителю получить исчерпывающие сведения о компании или частном лице. </p>
                                 </div>
@@ -116,7 +150,12 @@
                         <li class="examples-list__item">
                             <a class="examples-list__link" href="">
                                 <div class="examples-list__img">
-                                    <img src="./images/port3.jpg" alt="Пример веб-сайта">
+                                    <picture>
+                                        <source srcset="./images/desk-port3.jpg 1x, ./images/desk-port3-2x.jpg 2x" media="(min-width:1200px)" />
+                                        <source srcset="./images/tab-port3.jpg 1x, ./images/tab-port3-2x.jpg 2x" media="(min-width:768px)" />
+                                        <source srcset="./images/mob-port3.jpg 1x, ./images/mob-port3-2x.jpg 2x" media="(min-width:480px)" />
+                                        <img src="./images/mob-port3.jpg" alt="Пример веб-сайта">
+                                    </picture>
                                     <p class="examples-list__explain"> Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
                                         позволит посетителю получить исчерпывающие сведения о компании или частном лице. </p>
                                 </div>
@@ -129,7 +168,12 @@
                         <li class="examples-list__item">
                             <a class="examples-list__link" href="">
                                 <div class="examples-list__img">
-                                    <img src="./images/port4.jpg" alt="Пример веб-сайта">
+                                    <picture>
+                                        <source srcset="./images/desk-port4.jpg 1x, ./images/desk-port4-2x.jpg 2x" media="(min-width:1200px)" />
+                                        <source srcset="./images/tab-port4.jpg 1x, ./images/tab-port4-2x.jpg 2x" media="(min-width:768px)" />
+                                        <source srcset="./images/mob-port4.jpg 1x, ./images/mob-port4-2x.jpg 2x" media="(min-width:480px)" />
+                                        <img src="./images/mob-port4.jpg" alt="Пример веб-сайта">
+                                    </picture>
                                     <p class="examples-list__explain"> Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
                                         позволит посетителю получить исчерпывающие сведения о компании или частном лице. </p>
                                 </div>
@@ -142,7 +186,12 @@
                         <li class="examples-list__item">
                             <a class="examples-list__link" href="">
                                 <div class="examples-list__img">
-                                    <img src="./images/port5.jpg" alt="Пример веб-сайта">
+                                    <picture>
+                                        <source srcset="./images/desk-port5.jpg 1x, ./images/desk-port5-2x.jpg 2x" media="(min-width:1200px)" />
+                                        <source srcset="./images/tab-port5.jpg 1x, ./images/tab-port5-2x.jpg 2x" media="(min-width:768px)" />
+                                        <source srcset="./images/mob-port5.jpg 1x, ./images/mob-port5-2x.jpg 2x" media="(min-width:480px)" />
+                                        <img src="./images/mob-port5.jpg" alt="Пример веб-сайта">
+                                    </picture>
                                     <p class="examples-list__explain"> Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
                                         позволит посетителю получить исчерпывающие сведения о компании или частном лице. </p>
                                 </div>
@@ -155,7 +204,12 @@
                         <li class="examples-list__item">
                             <a class="examples-list__link" href="">
                                 <div class="examples-list__img">
-                                    <img src="./images/port6.jpg" alt="Пример веб-сайта">
+                                    <picture>
+                                        <source srcset="./images/desk-port6.jpg 1x, ./images/desk-port6-2x.jpg 2x" media="(min-width:1200px)" />
+                                        <source srcset="./images/tab-port6.jpg 1x, ./images/tab-port6-2x.jpg 2x" media="(min-width:768px)" />
+                                        <source srcset="./images/mob-port6.jpg 1x, ./images/mob-port6-2x.jpg 2x" media="(min-width:480px)" />
+                                        <img src="./images/mob-port6.jpg" alt="Пример веб-сайта">
+                                    </picture>
                                     <p class="examples-list__explain"> Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
                                         позволит посетителю получить исчерпывающие сведения о компании или частном лице. </p>
                                 </div>
@@ -168,7 +222,12 @@
                         <li class="examples-list__item">
                             <a class="examples-list__link" href="">
                                 <div class="examples-list__img">
-                                    <img src="./images/port7.jpg" alt="Пример веб-сайта">
+                                    <picture>
+                                        <source srcset="./images/desk-port7.jpg 1x, ./images/desk-port7-2x.jpg 2x" media="(min-width:1200px)" />
+                                        <source srcset="./images/tab-port7.jpg 1x, ./images/tab-port7-2x.jpg 2x" media="(min-width:768px)" />
+                                        <source srcset="./images/mob-port7.jpg 1x, ./images/mob-port7-2x.jpg 2x" media="(min-width:480px)" />
+                                        <img src="./images/mob-port7.jpg" alt="Пример веб-сайта">
+                                    </picture>
                                     <p class="examples-list__explain"> Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
                                         позволит посетителю получить исчерпывающие сведения о компании или частном лице. </p>
                                 </div>
@@ -181,7 +240,12 @@
                         <li class="examples-list__item">
                             <a class="examples-list__link" href="">
                                 <div class="examples-list__img">
-                                    <img src="./images/port8.jpg" alt="Пример веб-сайта">
+                                    <picture>
+                                        <source srcset="./images/desk-port8.jpg 1x, ./images/desk-port8-2x.jpg 2x" media="(min-width:1200px)" />
+                                        <source srcset="./images/tab-port8.jpg 1x, ./images/tab-port8-2x.jpg 2x" media="(min-width:768px)" />
+                                        <source srcset="./images/mob-port8.jpg 1x, ./images/mob-port8-2x.jpg 2x" media="(min-width:480px)" />
+                                        <img src="./images/mob-port8.jpg" alt="Пример веб-сайта">
+                                    </picture>
                                     <p class="examples-list__explain"> Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
                                         позволит посетителю получить исчерпывающие сведения о компании или частном лице. </p>
                                 </div>
@@ -194,7 +258,12 @@
                         <li class="examples-list__item">
                             <a class="examples-list__link" href="">
                                 <div class="examples-list__img">
-                                    <img src="./images/port9.jpg" alt="Пример веб-сайта">
+                                    <picture>
+                                        <source srcset="./images/desk-port9.jpg 1x, ./images/desk-port9-2x.jpg 2x" media="(min-width:1200px)" />
+                                        <source srcset="./images/tab-port9.jpg 1x, ./images/tab-port9-2x.jpg 2x" media="(min-width:768px)" />
+                                        <source srcset="./images/mob-port9.jpg 1x, ./images/mob-port9-2x.jpg 2x" media="(min-width:480px)" />
+                                        <img src="./images/mob-port9.jpg" alt="Пример веб-сайта">
+                                    </picture>
                                     <p class="examples-list__explain"> Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
                                         позволит посетителю получить исчерпывающие сведения о компании или частном лице. </p>
                                 </div>
