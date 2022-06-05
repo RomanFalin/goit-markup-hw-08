@@ -43,19 +43,19 @@ a {
 
 @media screen and (min-width: 480px) {
   .container {
-    width: 480px;
+    width: 465px;
   }
 }
 
 @media screen and (min-width: 768px) {
   .container {
-    width: 768px;
+    width: 753px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .container {
-    width: 1200px;
+    width: 1185px;
   }
 }
 
@@ -189,6 +189,7 @@ a {
     width: 100%;
     margin: 0;
     padding: 0;
+    border: 0;
   }
 }
 
