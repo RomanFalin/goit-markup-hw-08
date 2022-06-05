@@ -2,6 +2,11 @@
   background: $team-color;
   padding-top: $section-padding;
   padding-bottom: $section-padding;
+
+  @media screen and (max-width: 1199px) {
+    padding-top: $section-padding-tab-mob;
+    padding-bottom: $section-padding-tab-mob;
+  }
 }
 
 .team-title {
@@ -47,7 +52,6 @@
   }
 
   @media screen and (min-width: 768px) and (max-width: 1199px) {
-    width: 354px;
     flex-basis: calc(100% / 2 - #{$item-margin});
     margin-right: $item-margin;
     margin-bottom: $item-margin;

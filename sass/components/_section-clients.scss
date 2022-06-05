@@ -3,6 +3,11 @@
   margin-right: auto;
   padding-top: $section-padding;
   padding-bottom: $section-padding;
+
+  @media screen and (max-width: 1199px) {
+    padding-top: $section-padding-tab-mob;
+    padding-bottom: $section-padding-tab-mob;
+  }
 }
 
 .clients-title {

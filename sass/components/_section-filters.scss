@@ -1,6 +1,11 @@
 .section-filters {
   padding-top: $section-padding;
   padding-bottom: $section-padding;
+
+  @media screen and (max-width: 1199px) {
+    padding-top: $section-padding-tab-mob;
+    padding-bottom: $section-padding-tab-mob;
+  }
 }
 
 .filters-list {
@@ -66,6 +71,7 @@
   @media screen and (min-width: 768px) {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     margin-right: calc(-1 * #{$item-margin});
     margin-bottom: calc(-1 * #{$item-margin});
   }

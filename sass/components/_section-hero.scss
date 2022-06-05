@@ -2,6 +2,7 @@
   background: $footer-color;
   margin-left: auto;
   margin-right: auto;
+  height: fit-content;
   padding-top: 200px;
   padding-bottom: 200px;
   background-image: linear-gradient(
@@ -13,8 +14,11 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  max-height: auto;
-  max-width: 1600px;
+
+  @media screen and (max-width: 1199px) {
+    padding-top: 118px;
+    padding-bottom: 118px;
+  }
 }
 
 @media (min-device-pixel-ratio: 2),
