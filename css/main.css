@@ -73,6 +73,10 @@ a {
   overflow: hidden;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 .section-header {
   position: relative;
   border-bottom: 1px #ececec solid;
@@ -150,6 +154,44 @@ a {
           align-items: center;
 }
 
+@media screen and (max-width: 767px) {
+  .menu {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+}
+
 .menu-button {
   top: 10px;
   right: 15px;
@@ -185,12 +227,6 @@ a {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.menu-button.is-open {
-  top: 10px;
-  right: 41px;
-  position: fixed;
-}
-
 .menu-button.is-open .icon-cross {
   display: block;
   -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -214,9 +250,7 @@ a {
     z-index: 1;
   }
   .menu-container.is-open {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: block;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -371,8 +405,6 @@ a {
     width: 138px;
     -ms-flex-wrap: wrap-reverse;
         flex-wrap: wrap-reverse;
-    -ms-flex-line-pack: center;
-        align-content: center;
   }
 }
 
